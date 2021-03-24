@@ -11,28 +11,9 @@ namespace OK_Task5
 
         private static List<Task> tasks  = new List<Task>();
 
-        public class Task
-        {
-            public string Name;
-            public int Priority;
-            public int Complexity;
-            public int Time;
-          
-
-            public void setComplexity(int compl)
-            {
-                this.Complexity = compl;
-                if (compl == 1) this.Time = 4;
-                else
-                    if (compl == 2) this.Time = 2;
-                else
-                    if (compl == 3) this.Time = 1;
-            }
-        }
-
         public class PriorityFirst : IComparer<Task>
         {
-           public int Compare(Task x, Task y)
+            public int Compare(Task x, Task y)
             {
                 return x.Priority - y.Priority;
             }
